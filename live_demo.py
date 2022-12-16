@@ -62,12 +62,11 @@ NN.load_from_file('live_demo_weights.npy', 'live_demo_biases.npy')
 
 
 # setting up pygame window and drawing area
-screen = pg.display.set_mode((1200, 800))
-
 data_grid = [[SquareColourFloat() for _ in range(28)] for _ in range(28)]
 square_size = 800 / 28 - 1
 square_grid = [[pg.Rect(cx * 800 / 28, cy * 800 / 28, square_size, square_size) for cx in range(28)] for cy in range(28)]
 
+screen = pg.display.set_mode((1200, 800))
 screen.fill((30, 50, 30))
 render_all_squares(data_grid, square_grid)
 
